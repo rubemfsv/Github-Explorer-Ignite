@@ -1,1 +1,1 @@
-# Github-Explorer-Ignite
+# Github Explorer Ignite
