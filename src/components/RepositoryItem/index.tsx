@@ -1,7 +1,13 @@
 import React from "react";
+import { IRepository } from "../RepositoryList";
+
 import "./styles.scss";
 
-function RepositoryItem(props) {
+interface IRepositoryItemProps {
+  repository: IRepository;
+}
+
+function RepositoryItem(props: IRepositoryItemProps) {
   return (
     <li>
       <strong>{props.repository?.name}</strong>

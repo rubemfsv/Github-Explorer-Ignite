@@ -3,8 +3,15 @@ import RepositoryItem from "../RepositoryItem";
 
 import "./styles.scss";
 
+export interface IRepository {
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+}
+
 function RepositoryList() {
-  const [repositories, setRepositories] = useState([]);
+  const [repositories, setRepositories] = useState<IRepository[]>([]);
 
   useEffect(() => {
     fetch("https://api.github.com/users/rubemfsv/repos")
